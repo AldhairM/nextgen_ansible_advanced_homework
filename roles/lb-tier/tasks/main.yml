@@ -1,14 +1,14 @@
 ---
-- name: Install {{ payload }}
+- name: 'Install {{ payload }}'
   yum:
-    name: "{{ payload }}"
+    name: '{{ payload }}'
     state: latest
   tag:
     - haproxy
 
-- name: Enable {{ payload }} at boot
+- name: 'Enable {{ payload }} at boot'
   service:
-    name: "{{ payload }}"
+    name: '{{ payload }}'
     enabled: yes
   tag:
     - haproxy
