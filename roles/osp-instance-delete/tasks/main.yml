@@ -1,10 +1,12 @@
 ---
 - name: Fetch Instance Info
+# Fetch the data from OS
   os_server_facts:
     cloud: openstack
   register: result
 
 - name: Delete instances
+ # Delete the servers
   os_server:
     cloud: openstack
     name: "{{ item.name }}"
